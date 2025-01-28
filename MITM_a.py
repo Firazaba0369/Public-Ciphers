@@ -13,7 +13,7 @@ def main():
     Xa = random.randint(1, q - 1)
     Ya = pow(a, Xa ,q)
 
-    #generate private and publics keys for Bob
+    #generate private and public keys for Bob
     Xb = random.randint(1, q - 1)
     Yb = pow(a, Xb, q)
 
@@ -56,7 +56,7 @@ def main():
     c0 = cipher_a.encrypt(pad(m0.encode(), AES.block_size))
     c1 = cipher_b.encrypt(pad(m1.encode(), AES.block_size))
 
-    #decrypt Alice, Bob, Mallory's messages
+    #decrypt Alice, Bob, and Mallory's messages
     cipher_m_decrypt = AES.new(Km, AES.MODE_CBC, iv0)
     cipher_a_decrypt= AES.new(Km, AES.MODE_CBC, iv0)
     cipher_b_decrypt = AES.new(Kb, AES.MODE_CBC, iv1)

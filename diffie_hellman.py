@@ -13,7 +13,7 @@ def main():
     Xa = random.randint(1, q - 1)
     Ya = pow(a, Xa ,q)
 
-    #generate private and publics keys for Bob
+    #generate private and public keys for Bob
     Xb = random.randint(1, q - 1)
     Yb = pow(a, Xb, q)
 
